@@ -9,7 +9,7 @@ void FillArray(int[] Array1)
     }
 }
 
-void SumOfOddIndexes(int[] Array2)
+int SumOfOddIndexes(int[] Array2)
 {
     int Sum = 0;
     for(int j = 0; j < Array2.Length; j++)
@@ -17,7 +17,8 @@ void SumOfOddIndexes(int[] Array2)
         if (j %2 == 1)
         Sum = Sum + Array2[j];
     }
-    Console.WriteLine($"The sum of numbers in odd indexes in this array is {Sum}");
+    return Sum;
+    
 }
 
 Console.Clear();
@@ -26,4 +27,6 @@ int[] Array = new int[10];
 
 FillArray(Array);
 Console.WriteLine();
-SumOfOddIndexes(Array);
+
+int Sum = SumOfOddIndexes(Array);
+Console.WriteLine($"The sum of numbers in odd indexes in this array is {Sum}");
